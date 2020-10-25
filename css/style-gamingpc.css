@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+html {
+    background-color: #4e4e4e;
+}
+#box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 200px;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 2.5rem;
+}
+  
+.gradient-border {
+    --borderWidth: 10px;
+    background: #1D1F20;
+    position: relative;
+    left: 40%;
+    border-radius: var(--borderWidth);
+}
+  
+.gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+}
+  
+  
+@keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+}
+main{
+    width: 75%;
+    height: 85vh;
+    margin: 0 auto;
+    background: var(--light-color);
+    padding: 8rem 2rem 3rem 2rem;
+    margin-top: -5rem;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+}
+
+img {
+    width: 500px;
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2.2rem;
+    top: 150%;
+    clip-path: polygon(19% 0, 77% 0, 99% 100%, 0 100%);
+
+}
+.text-box {
+      background-color: #4e4e4e;
+
+}
+h2 {
+    position: relative;
+    left: 40%;
+}
+.anim1{
+    display: block;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+.anim2{
+    display: block;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+.anim3{
+    display: block;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+.anim4{
+    display: block;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    50% {
+        transform: translateX(-200);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(1000);
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    50% {
+        transform: translateX(200);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(1000);
+    }
+}
+
+.footer {
+    width: 75%;
+    margin: 0 auto;
+    background: black;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 3rem;
+}
